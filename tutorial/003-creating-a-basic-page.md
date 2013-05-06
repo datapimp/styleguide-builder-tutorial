@@ -9,13 +9,13 @@ Start off by creating a template in the templates/pages folder of the project, n
 The contents of that file are as follows:
 
 ```
-<%= IO.read('../source/javascripts/styleguide-builder/templates/pages/home.jst.skim')
+<%= IO.read('../source/javascripts/styleguide-builder/templates/pages/home.jst.skim') %>
 ```
 
 The view component needed to register this page is simple:
 
 ```
-<%= IO.read('../source/javascripts/styleguide-builder/views/pages/home.coffee')
+<%= IO.read('../source/javascripts/styleguide-builder/views/pages/home.coffee') %>
 ```
 
 This simply registers a component named 'home' with the application's registry, which allows us to reference
