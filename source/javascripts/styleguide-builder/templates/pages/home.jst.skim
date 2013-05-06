@@ -1,1 +1,17 @@
 h1 Welcome to the StyleBuilder Application
+
+p
+  | A style guide is meant to showcase the typography, color, spacing, and other visual conventions for your site.
+  | In addition to this, common UI elements such as containers, tables, form controls, grid settings, and many
+  | other components along with the proper markup and class conventions needed to properly display them on the page
+  | can be displayed.
+
+p
+  | Rather than maintaining a static document, this application allows you to use your production stylesheets and
+  | develop best coding practices directly in the browser, so you can ensure that the stylesheets in your project
+  | best represent the intentions of your visual designers.
+
+ol.steps
+  li
+    a.link href="#components"
+      | Common components

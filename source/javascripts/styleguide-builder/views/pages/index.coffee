@@ -1,1 +1,2 @@
-#= require_tree .
+#= require ./component_examples
+#= require ./home
