@@ -1,3 +1,3 @@
 Luca.initialize "StyleBuilder",
-  modelBootstrap: false
+  modelBootstrap: window.StyleBuilderBootstrap
   baseParams: {}

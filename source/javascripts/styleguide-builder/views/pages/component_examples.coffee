@@ -1,4 +1,4 @@
-#= require_tree ./component_examples
+#= require ./component_examples/index
 #= require_self
 
 page = StyleBuilder.register      "StyleBuilder.pages.ComponentExamples"
@@ -8,14 +8,27 @@ page.configuration
   template: "pages/component_examples"
   regions:
     display:
-      name: "component_example_display_area"
-      role: "display_area"
-
+      component: "example_display"
     list:
-      type: "collection"
-      role: "component_selector"
-      collection: "component_examples"
-      itemRenderer: (item)->
-        "sup"
+      name: "example_selector"
+      component: "component_example_selector"
+
+page.configuration
+  defaultState:
+    "current_component": undefined
+
+page.configuration
+  componentEvents:
+    "example_selector on:selection": "onComponentSelection"
+
+page.privateMethods
+  onComponentSelection: (componentExample)->
+    display = @getExampleDisplay()
+    display.loadExample(componentExample)
+
+page.publicMethods
+  show: (selected)->
+
+  index: ()->
 
 page.register()

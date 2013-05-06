@@ -7,11 +7,22 @@ app.configuration
   autoBoot: false
   fluid: true
   fullscreen: true
+
+app.configuration
+  collectionManager:
+    initialCollections:[
+      "component_examples"
+    ]
+
+app.configuration
   routes:
     "": "home"
-
+    "components": "component_examples#index"
+    "components/:selected": "component_examples#show"
 
 app.contains
   component: "home"
+,
+  component: "component_examples"
 
 app.register()

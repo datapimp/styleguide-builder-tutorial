@@ -5,6 +5,12 @@ set :images_dir, 'images'
 activate :sprockets
 activate :code_sync
 
+helpers do
+  def test_data filename
+    IO.read("./test-data/#{ filename }")
+  end
+end
+
 # Build-specific configuration
 configure :build do
   activate :minify_css
