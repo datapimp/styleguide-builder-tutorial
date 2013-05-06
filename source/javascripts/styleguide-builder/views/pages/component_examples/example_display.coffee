@@ -16,10 +16,10 @@ view.defines
       @$("[data-state='no-example-selected']").hide()
 
   markupContainer: ()->
-    @$('pre.markup')
+    @$('.code-container .markup')
 
   styleContainer: ()->
-    @$('pre.style')
+    @$('.code-container .style')
 
   loadExample: (example)->
     @setEmptyState('off')

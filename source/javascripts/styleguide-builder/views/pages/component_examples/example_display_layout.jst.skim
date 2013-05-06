@@ -9,9 +9,17 @@
       | We will show a live example of the component, with the markup needed
       | to render the component, and any relevant style declarations that
       | are needed to achieve the visual effect.
+
   .state data-state="example-selected"
     h3.title
-    .code-container
-      pre.markup
-      pre.style
-    .preview-area
+    .code-container.row-fluid
+      .span6
+        h5 Markup
+        textarea.markup
+      .span6
+        h5 Style
+        textarea.style
+
+    .preview-area.row-fluid
+      .span12
+        #preview-canvas
