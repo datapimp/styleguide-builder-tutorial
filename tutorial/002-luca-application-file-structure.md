@@ -8,13 +8,16 @@ A typical Luca application has the following underlying file structure:
 
 ```
 - app/assets/javascripts/styleguide-builder
-  - collections
+  - data
+    - component_examples
+      - model.coffee
+      - collection.coffee
+    - model.coffee
+    - collection.coffee
     - index.coffee
   - dependencies
     - index.coffee
   - lib
-  - models
-    - index.coffee
   - templates
   - views
     - pages
