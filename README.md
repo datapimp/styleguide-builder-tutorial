@@ -6,6 +6,18 @@ A Style Guide is a great way to provide a living, visual test of your applicatio
 
 It helps maintain consistent visual styling and promotes the re-use of existing style rules and conventions, in an aim to keep your front end code base consistent and to prevent the duplication of redundant CSS declarations as your stylesheets grow.
 
+### Running The App
+```
+git clone https://github.com/datapimp/styleguide-builder-tutorial.git
+cd styleguide-builder-tutorial
+bundle
+bundle exec middleman # runs a web server on http://localhost:4567
+```
+
+### Follow along with the tutorial
+
+This is a tutorial for building an application with the Luca framework.  You can follow along with the tutorial by reading the files in the tutorial folder.
+
 ### User Stories
 
 - As a designer, I should be able to define a color palette.  I should be able to name each color and assign a hex value to it.  This variable should be available as a SASS variable.
