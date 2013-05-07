@@ -36,7 +36,7 @@ view.privateMethods
   loadMarkupContent: (content)->
     unless @markupEditor?
       @markupEditor = CodeMirror @markupContainer()[0],
-        mode: "htmlmixed"
+        mode: "haml"
         theme: "lesser-dark"
         lineNumbers: true
 
@@ -48,7 +48,7 @@ view.publicMethods
   loadExample: (example)->
     @setEmptyState('off')
     @$('h3').html example.read('name')
-    @loadMarkupContent example.read("markup_content")
-    @loadStyleContent example.read("style_content")
+    @loadMarkupContent example.markupContent()
+    @loadStyleContent example.styleContent()
 
 view.register()
