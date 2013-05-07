@@ -22,6 +22,9 @@ view.privateMethods
   styleContainer: ()->
     @$('.code-container .style')
 
+  previewCanvas: ()->
+    @$('.preview-canvas')
+
   loadStyleContent: (content)->
     unless @styleEditor?
       @styleEditor = CodeMirror @styleContainer()[0],
@@ -50,5 +53,6 @@ view.publicMethods
     @$('h3').html example.read('name')
     @loadMarkupContent example.markupContent()
     @loadStyleContent example.styleContent()
+    @previewCanvas().html Luca.template("examples/#{ example.id }")
 
 view.register()
