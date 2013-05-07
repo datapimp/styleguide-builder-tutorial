@@ -7,3 +7,4 @@
 #= require ./codemirror-htmlmixed
 #= require ./codemirror-sass
 #= require ./codemirror-haml
+#= require ./spectrum
