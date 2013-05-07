@@ -23,7 +23,7 @@ view.privateMethods
     @$('.code-container .style')
 
   previewCanvas: ()->
-    @$('.preview-canvas')
+    @$('#preview-canvas')
 
   loadStyleContent: (content)->
     unless @styleEditor?
@@ -50,7 +50,9 @@ view.privateMethods
 view.publicMethods
   loadExample: (example)->
     @setEmptyState('off')
-    @$('h3').html example.read('name')
+    @$('h3.title').html example.read('name')
+    @$('p.description').html example.read('description')
+
     @loadMarkupContent example.markupContent()
     @loadStyleContent example.styleContent()
     @previewCanvas().html Luca.template("examples/#{ example.id }")

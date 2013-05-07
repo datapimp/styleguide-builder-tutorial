@@ -12,6 +12,7 @@
 
   .state data-state="example-selected"
     h3.title
+    p.description
     .code-container.row-fluid
       .span6
         h5 Markup
@@ -22,4 +23,5 @@
 
     .preview-area.row-fluid
       .span12
+        h3 Preview
         #preview-canvas
