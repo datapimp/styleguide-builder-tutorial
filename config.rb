@@ -7,7 +7,7 @@ activate :code_sync
 
 helpers do
   def test_data filename
-    IO.read("./test-data/#{ filename }")
+    JSON.generate IO.read("./test-data/#{ filename }").lines.to_a
   end
 end
 

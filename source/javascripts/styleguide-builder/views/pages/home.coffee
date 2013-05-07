@@ -3,3 +3,5 @@ home.extends                      "StyleBuilder.Page"
 
 home.defines
   template: "pages/home"
+  index: ()->
+    true

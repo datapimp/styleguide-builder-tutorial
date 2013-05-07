@@ -15,10 +15,10 @@
     .code-container.row-fluid
       .span6
         h5 Markup
-        textarea.markup
+        .markup
       .span6
         h5 Style
-        textarea.style
+        .style
 
     .preview-area.row-fluid
       .span12

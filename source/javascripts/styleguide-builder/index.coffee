@@ -2,8 +2,7 @@
 #= require_tree ./templates
 
 #= require ./lib
-#= require ./models
-#= require ./collections
+#= require ./data
 #= require ./views
 #= require ./application
 

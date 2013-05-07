@@ -1,9 +1,10 @@
 view = StyleBuilder.register "StyleBuilder.views.ExampleDisplay"
 view.extends                 "Luca.View"
 
-view.defines
+view.configuration
   bodyTemplate: "component_examples/example_display_layout"
 
+view.privateMethods
   beforeRender: ()->
     @setEmptyState("on")
 
@@ -21,9 +22,33 @@ view.defines
   styleContainer: ()->
     @$('.code-container .style')
 
+  loadStyleContent: (content)->
+    unless @styleEditor?
+      @styleEditor = CodeMirror @styleContainer()[0],
+        mode: "sass"
+        theme: "lesser-dark"
+        lineNumbers: true
+
+    @styleEditor.setValue("#{content}")
+
+    @
+
+  loadMarkupContent: (content)->
+    unless @markupEditor?
+      @markupEditor = CodeMirror @markupContainer()[0],
+        mode: "htmlmixed"
+        theme: "lesser-dark"
+        lineNumbers: true
+
+    @markupEditor.setValue("#{content}")
+
+    @
+
+view.publicMethods
   loadExample: (example)->
     @setEmptyState('off')
-
     @$('h3').html example.read('name')
-    @markupContainer().html example.read("markup_content")
-    @styleContainer().html example.read("style_content")
+    @loadMarkupContent example.read("markup_content")
+    @loadStyleContent example.read("style_content")
+
+view.register()

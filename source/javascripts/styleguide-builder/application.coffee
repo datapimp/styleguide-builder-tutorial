@@ -9,14 +9,11 @@ app.configuration
   fullscreen: true
 
 app.configuration
-  collectionManager:
-    initialCollections:[
-      "component_examples"
-    ]
+  collectionManagerClass: "StyleBuilder.CollectionManager"
 
 app.configuration
   routes:
-    "": "home"
+    "": "home#index"
     "components": "component_examples#index"
     "components/:selected": "component_examples#show"
 
