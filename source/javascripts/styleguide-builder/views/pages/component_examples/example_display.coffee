@@ -1,12 +1,27 @@
 view = StyleBuilder.register "StyleBuilder.views.ExampleDisplay"
-view.extends                 "Luca.View"
+view.extends                 "StyleBuilder.Page"
 
 view.configuration
-  bodyTemplate: "component_examples/example_display_layout"
+  template: "component_examples/example_display_layout"
+  regions:
+    style_content:
+      role: "style_content"
+      name: "style_content_editor"
+      type: "asset_editor"
+      mode: "sass"
+      reader: "styleContent"
+
+    markup_content:
+      role: "markup_content"
+      name: "markup_content_editor"
+      reader: "markupContent"
+      type: "asset_editor"
+      mode: "haml"
 
 view.privateMethods
   beforeRender: ()->
     @setEmptyState("on")
+    StyleBuilder.Page::beforeRender?.apply(@, arguments)
 
   setEmptyState:(state="off")->
     if state is "on"
@@ -16,45 +31,27 @@ view.privateMethods
       @$("[data-state]").show()
       @$("[data-state='no-example-selected']").hide()
 
-  markupContainer: ()->
-    @$('.code-container .markup')
-
-  styleContainer: ()->
-    @$('.code-container .style')
-
   previewCanvas: ()->
     @$('#preview-canvas')
 
-  loadStyleContent: (content)->
-    unless @styleEditor?
-      @styleEditor = CodeMirror @styleContainer()[0],
-        mode: "sass"
-        theme: "lesser-dark"
-        lineNumbers: true
+  displayStyleExample: ()->
+    @getStyleContent().loadExample(@example)
 
-    @styleEditor.setValue("#{content}")
-
-    @
-
-  loadMarkupContent: (content)->
-    unless @markupEditor?
-      @markupEditor = CodeMirror @markupContainer()[0],
-        mode: "haml"
-        theme: "lesser-dark"
-        lineNumbers: true
-
-    @markupEditor.setValue("#{content}")
-
-    @
+  displayMarkupExample: ()->
+    @getMarkupContent().loadExample(@example)
 
 view.publicMethods
-  loadExample: (example)->
-    @setEmptyState('off')
-    @$('h3.title').html example.read('name')
-    @$('p.description').html example.read('description')
+  renderPreviewContent: ()->
+    if @example?
+      @displayMarkupExample()
+      @displayStyleExample()
+      @previewCanvas().html Luca.template("examples/#{ @example.id }")
 
-    @loadMarkupContent example.markupContent()
-    @loadStyleContent example.styleContent()
-    @previewCanvas().html Luca.template("examples/#{ example.id }")
+  loadExample: (@example)->
+    @setEmptyState('off')
+    @$('h3.title').html @example.read('name')
+    @$('p.description').html @example.read('description')
+    @renderPreviewContent()
+
 
 view.register()

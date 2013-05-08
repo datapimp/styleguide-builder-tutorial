@@ -12,3 +12,5 @@ gem "skim"
 
 # Sass is the famous stylesheet language
 gem "sass"
+
+#gem "code_sync", path: File.join(ENV['HOME'],'Projects','code_sync')

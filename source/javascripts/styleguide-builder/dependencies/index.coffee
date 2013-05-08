@@ -1,3 +1,4 @@
+#= require ./luca-dependencies.min
 #= require ./codemirror
 #= require ./codemirror-ruby
 #= require ./codemirror-coffeescript
@@ -8,3 +9,4 @@
 #= require ./codemirror-sass
 #= require ./codemirror-haml
 #= require ./spectrum
+#= require ./luca.min

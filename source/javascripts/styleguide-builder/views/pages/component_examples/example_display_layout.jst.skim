@@ -22,8 +22,8 @@
     .code-container.row-fluid
       .span6
         h5 Markup
-        .markup
+        .markup data-region="markup_content"
       .span6
         h5 Style
-        .style
+        .style data-region="style_content"
 
