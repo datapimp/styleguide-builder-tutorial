@@ -14,3 +14,4 @@ gem "skim"
 gem "sass"
 
 #gem "code_sync", path: File.join(ENV['HOME'],'Projects','code_sync')
+gem "code_sync", git: "https://github.com/datapimp/code_sync.git"

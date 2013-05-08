@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/jonathan/Projects/code_sync
+GIT
+  remote: https://github.com/datapimp/code_sync.git
+  revision: c501b3da515fe290fc4ced107c5ebcef3c1e8c02
   specs:
     code_sync (0.3.1)
       faye
@@ -17,7 +18,6 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.4)
     chunky_png (1.2.8)
-    coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -61,7 +61,6 @@ GEM
     listen (0.7.3)
     maruku (0.6.1)
       syntax (>= 1.0.0)
-    method_source (0.8.1)
     middleman (3.0.13)
       middleman-core (= 3.0.13)
       middleman-more (= 3.0.13)
@@ -101,10 +100,6 @@ GEM
     padrino-helpers (0.10.7)
       i18n (~> 0.6)
       padrino-core (= 0.10.7)
-    pry (0.9.12)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.4)
     rack (1.4.5)
     rack-protection (1.5.0)
       rack
@@ -126,7 +121,6 @@ GEM
     slim (1.2.2)
       temple (~> 0.4.0)
       tilt (~> 1.3.3)
-    slop (3.4.4)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -158,7 +152,6 @@ DEPENDENCIES
   code_sync!
   middleman (~> 3.0.13)
   middleman-sprockets
-  pry
   sass
   skim
   slim
