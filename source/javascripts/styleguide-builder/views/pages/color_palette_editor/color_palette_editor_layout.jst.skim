@@ -1,0 +1,49 @@
+.row-fluid
+  .span12
+    h3
+      | Color Palette
+      | &nbsp;
+      a.link href="#"
+        small Back
+
+form.hide.add-new-color-form
+  h5 Add New Color
+  .row-fluid
+    .span4
+      .control-group.required
+        label.control-label Name
+        .controls
+          input type="text" name="name"
+
+    .span4
+      .control-group
+        label.control-label Variable
+        .controls
+          input type="text" name="variable"
+
+    .span4
+      .control-group
+        label.control-label Color
+        .controls
+          input.color-picker-input type="text" name="value"
+
+  .form-actions
+    .pull-right
+      .btn.add-new
+        | Cancel
+      .btn.btn-primary.submit-button
+        | Add
+
+div.list-container data-region="list"
+
+.well.toolbar
+  .pull-right
+    .btn.btn-success.add-new
+      i.icon.icon-white.icon-plus-sign
+      | &nbsp; Add Color
+    .btn.btn-primary
+      i.icon.icon-chevron-right.icon-white
+      | &nbsp; Export Variables
+
+  .clearfix
+

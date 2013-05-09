@@ -11,12 +11,20 @@
       | are needed to achieve the visual effect.
 
   .state data-state="example-selected"
-    h3.title
-    p.description
+    .row-fluid
+      .span6
+        h3.title
+      .span6
+        .pull-right
+          .btn.btn-small
+            | Edit
+
+    .row-fluid
+      .span12
+        p.description
 
     .preview-area.row-fluid
       .span12
-        h3 Preview
         #preview-canvas
 
     .code-container.row-fluid

@@ -1,0 +1,7 @@
+.color-palette-item-display
+  h5
+    == @model.get("name")
+    | &nbsp;
+    == @model.get("value")
+
+  .color-preview style="width:120px;height:120px;border-radius:60px;background-color:#{ @model.get('value') }"

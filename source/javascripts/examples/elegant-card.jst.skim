@@ -1,2 +1,7 @@
 .card.elegant
-  | Example Content inside of an Elegant Card
+  h4
+    | Example Content inside of an Elegant Card.
+  p
+    | Go ahead and edit the content of the markup code or the stylesheet in the editors below.
+  p
+    | Be amazed as it updates before your eyes.

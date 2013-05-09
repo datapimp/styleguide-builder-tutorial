@@ -1,17 +1,35 @@
-h1 Welcome to the StyleBuilder Application
+.row-fluid
+  .span12
+    h1 Welcome to the StyleBuilder Application
 
-p
-  | A style guide is meant to showcase the typography, color, spacing, and other visual conventions for your site.
-  | In addition to this, common UI elements such as containers, tables, form controls, grid settings, and many
-  | other components along with the proper markup and class conventions needed to properly display them on the page
-  | can be displayed.
+    p
+      | A style guide is meant to showcase the typography, color, spacing, and other visual conventions for your site.
+      |  In addition to this, common UI elements such as containers, tables, form controls, grid settings, and many
+      |  other components along with the proper markup and class conventions needed to properly display them on the page
+      |  can be displayed.
 
-p
-  | Rather than maintaining a static document, this application allows you to use your production stylesheets and
-  | develop best coding practices directly in the browser, so you can ensure that the stylesheets in your project
-  | best represent the intentions of your visual designers.
+    p
+      | Rather than maintaining a static document, this application allows you to use your production stylesheets and
+      |  develop best coding practices directly in the browser, so you can ensure that the stylesheets in your project
+      |  best represent the intentions of your visual designers.
 
-ol.steps
-  li
-    a.link href="#components"
-      | Common components
+.row-fluid.well
+  .span12
+    ol.steps
+      li
+        a.link href="#typography"
+          | Typography
+        p
+          | Define the typography preferences for your site. Define different types of headings, sub headings, paragraphs, etc
+      li
+        a.link href="#colors"
+          | Color Palette
+        p
+          | Define the selection of colors which make up the main color palette for your site.  These values will be available
+          |  throughout your stylesheets as SASS variables
+      li
+        a.link href="#components"
+          | Component Examples
+        p
+          | Show example components such as containers, forms, tables, navigation menus, etc.
+          |  Allows you to show example markup and visually see the effect of the various treatment CSS classes you define in your stylesheets.

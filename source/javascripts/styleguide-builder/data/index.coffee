@@ -7,9 +7,16 @@
 #= require ./collection
 
 # The specific data sources are defined here.  Everything inherits from
-# the base classes included above
+# the base classes included above.
+#
+#
+#
+#
 #= require ./component_examples
-
+#= require ./colors
+#
+#
+#
 # The Collection Manager for our app is defined here.  It is responsible
 # for loading all of the data sources in our app.
 
@@ -17,5 +24,6 @@
 
 class StyleBuilder.CollectionManager extends Luca.CollectionManager
   initialCollections:[
+    "colors"
     "component_examples"
   ]
