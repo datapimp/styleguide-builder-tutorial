@@ -3,6 +3,7 @@ model.extends                 "StyleBuilder.Model"
 
 model.configuration
   defaults:
+    id: "component-example"
     name: "Component Example"
     description: "A Component Example is some sample markup which demonstrates the effect of having a certain combination of one or more CSS classes applied to it"
     markup_content: ".component-example\n  h5 This is what a component might look like"
@@ -13,10 +14,12 @@ model.configuration
 model.publicMethods
 
   markupContent: ()->
-    @get("markup_content").join("")
+    content = @get("markup_content")
+    if _.isArray(content) then content.join("") else content
 
   styleContent: ()->
-    @get("style_content").join("")
+    content = @get("style_content")
+    if _.isArray(content) then content.join("") else content
 
 
 model.register()

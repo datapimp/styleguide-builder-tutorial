@@ -5,6 +5,7 @@ page = StyleBuilder.register      "StyleBuilder.pages.ComponentExamples"
 page.extends                      "StyleBuilder.Page"
 
 page.configuration
+  collection: "component_examples"
   template: "pages/component_examples"
   regions:
     display:
@@ -21,7 +22,14 @@ page.configuration
   componentEvents:
     "example_selector on:selection": "onComponentSelection"
 
+page.configuration
+  events:
+    "click .add-new-example" : "addNewExample"
+
 page.privateMethods
+  addNewExample: ()->
+    @collection.add()
+
   onComponentSelection: (componentExample)->
     display = @getExampleDisplay()
     display.loadExample(componentExample)

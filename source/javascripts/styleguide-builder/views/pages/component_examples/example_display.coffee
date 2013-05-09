@@ -62,7 +62,15 @@ view.privateMethods
 view.publicMethods
   renderPreviewContent: ()->
     if @example?
-      @previewCanvas().html Luca.template("examples/#{ @example.id }")
+      try
+        @previewCanvas().html Luca.template("examples/#{ @example.id }")
+      catch e
+        # Force a change event in the editor.
+        # This is a hack to handle the adding of a new example for which there
+        # may not yet be a JST template.  This will result in a blank one being created.
+        value = @getMarkupContent().getValue()
+        @getMarkupContent().setValue("#{ value } ")
+
 
   loadExample: (@example)->
     @setEmptyState('off')

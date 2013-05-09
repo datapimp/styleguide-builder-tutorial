@@ -11,14 +11,7 @@
       | are needed to achieve the visual effect.
 
   .state data-state="example-selected"
-    .row-fluid
-      .span6
-        h3.title
-      .span6
-        .pull-right
-          .btn.btn-small
-            | Edit
-
+    h3.title
     .row-fluid
       .span12
         p.description

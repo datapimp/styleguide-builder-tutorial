@@ -1,14 +1,15 @@
 .row-fluid
-  .span2.examples-list-wrapper
+  .span3.examples-list-wrapper
     h4
       | Examples
       a href="#"
         small (Back)
 
-    div.examples-list-container data-region="list"
-    .btn-group
-      .btn.btn-success.btn-small
-        i.icon.icon-plus-sign.icon-white
-        | &nbsp; Create
-  .span10
+    .well.examples-list-container data-region="list"
+
+    .btn.btn-success.btn-small.add-new-example
+      i.icon.icon-plus-sign.icon-white
+      | &nbsp; Create
+
+  .span9
     div data-region="display"
